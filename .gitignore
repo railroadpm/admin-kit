@@ -62,7 +62,7 @@ typings/
 
 # Cypress unnecessary files, test run screenshots and videos
 
-# **/cypress/plugins
-# **/cypress/support
+**/cypress/plugins
+**/cypress/support
 **/cypress/screenshots
 **/cypress/videos
