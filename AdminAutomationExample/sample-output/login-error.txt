@@ -1,0 +1,25 @@
+> npm run upload                                                                                     
+                                                                                                     
+> aar-rpm-publish@1.0.0 upload C:\src\gh\aar-rpm-participant-kit\AdminAutomationExample              
+> cypress run                                                                                        
+                                                                                                     
+==================================================================================================== 
+                                                                                                     
+  (Run Starting)                                                                                     
+                                                                                                     
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐ 
+  │ Cypress:    3.0.1                                                                              │ 
+  │ Browser:    Electron 59 (headless)                                                             │ 
+  │ Specs:      1 found (submit-weekly-report.js)                                                  │ 
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘ 
+                                                                                                     
+──────────────────────────────────────────────────────────────────────────────────────────────────── 
+                                                                                                     
+  Running: submit-weekly-report.js...                                                      (1 of 1)  
+
+...[snip]
+
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! aar-rpm-publish@1.0.0 upload: `cypress run`
+npm ERR! Exit status 1

@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# Cypress unnecessary files, test run screenshots and videos
+
+# **/cypress/plugins
+# **/cypress/support
+**/cypress/screenshots
+**/cypress/videos

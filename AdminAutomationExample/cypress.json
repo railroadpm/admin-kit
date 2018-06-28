@@ -1,4 +1,8 @@
 {
   "chromeWebSecurity": false,
-  "baseUrl": "https://admin.rrpm.run"
+  "baseUrl": "https://admin.rrpm.run",
+  "reporter": "tap",
+  "watchForFileChanges": false,
+  "video": false,
+  "modifyObstructiveCode": false
 }
