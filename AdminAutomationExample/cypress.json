@@ -4,5 +4,6 @@
   "reporter": "tap",
   "watchForFileChanges": false,
   "video": false,
-  "modifyObstructiveCode": false
+  "modifyObstructiveCode": false,
+  "defaultCommandTimeout": 30000
 }

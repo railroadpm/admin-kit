@@ -10,19 +10,18 @@ describe('RPM Admin', () => {
     cy.get('#netlify-identity-widget').then($iframe => {
       const $body = $iframe.contents().find('body');
 
-      // Log in btn at top
+      // Select "Log in" tab instead of "Sign up"
       cy.wrap($body)
         .find('button.btnHeader:nth-of-type(2)')
         .click();
 
+      // Log in to Netlify Identity
       cy.wrap($body)
         .find('input[name="email"]')
         .type(config.username);
       cy.wrap($body)
         .find('input[name="password"]')
         .type(config.password);
-
-      // Log in to Netlify Identity
       cy.wrap($body)
         .find('.form button[type="submit"]')
         .click();
@@ -53,8 +52,16 @@ describe('RPM Admin', () => {
           });
       });
 
-    // Publish new report to site
+    // Submit new report
     cy.contains('Publish').click();
     cy.contains('Publish now').click();
+
+    // Wait for changes to be saved
+    cy.contains('Changes saved');
+
+    // Log out
+    cy.get('.nc-entryEditor-toolbar button.nc-appHeader-avatar').click();
+    cy.contains('Log Out').click();
+    cy.contains('Login with Netlify Identity');
   });
 });

@@ -1,7 +1,7 @@
 > npm run upload                                                                                    
-                                                                                                    
+
 > cypress run                                                                                       
-                                                                                                    
+
 ====================================================================================================
                                                                                                     
   (Run Starting)                                                                                    
@@ -16,43 +16,31 @@
                                                                                                     
   Running: submit-weekly-report.js...                                                      (1 of 1) 
 1..1                                                                                                
-not ok 1 RPM Admin accepts a valid login and a new set of weekly data to publish                    
-  CypressError: Timed out retrying: expected 'https://admin.rrpm.run/#/' to include '/collections'  
-
-[snip]
-
+ok 1 RPM Admin accepts a valid login and a new set of weekly data to publish                        
 # tests 1                                                                                           
-# pass 0                                                                                            
-# fail 1                                                                                            
+# pass 1                                                                                            
+# fail 0                                                                                            
                                                                                                     
   (Results)                                                                                         
                                                                                                     
   ┌───────────────────────────────────────┐                                                         
   │ Tests:        1                       │                                                         
-  │ Passing:      0                       │                                                         
-  │ Failing:      1                       │                                                         
+  │ Passing:      1                       │                                                         
+  │ Failing:      0                       │                                                         
   │ Pending:      0                       │                                                         
   │ Skipped:      0                       │                                                         
-  │ Screenshots:  1                       │                                                         
+  │ Screenshots:  0                       │                                                         
   │ Video:        false                   │                                                         
-  │ Duration:     34 seconds              │                                                         
+  │ Duration:     21 seconds              │                                                         
   │ Spec Ran:     submit-weekly-report.js │                                                         
   └───────────────────────────────────────┘                                                         
-                                                                                                    
-[snip]                                                                                                    
                                                                                                     
 ====================================================================================================
                                                                                                     
   (Run Finished)                                                                                    
                                                                                                     
-                                                                                                    
       Spec                                                Tests  Passing  Failing  Pending  Skipped 
   ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ × submit-weekly-report.js                   00:34        1        -        1        -        - │
+  │ √ submit-weekly-report.js                   00:21        1        1        -        -        - │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    1 of 1 failed (100%)                        00:34        1        -        1        -        -  
-
-[snip]
-
-npm ERR! Exit status 1                                                                              
-npm ERR!                                                                                            
+    All specs passed!                           00:21        1        1        -        -        -  
