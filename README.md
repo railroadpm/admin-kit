@@ -1,8 +1,8 @@
 # RailroadPM.org Participant Kit
 
-Railroad participants can use the information and examples in this repo for integrating with the new RailroadPM.org site!
+Railroad participants can use the information and examples in this repo for integrating with the RailroadPM.org site.
 
-This should help to make data collection and submission activities go smoothly by demonstrating methods for automated machine-to-machine
+This should help to make data collection and submission activities go smoothly by providing options for automated machine-to-machine
 electronic data interchange (EDI).
 
 ## Accept Invitation to Participate
@@ -29,4 +29,6 @@ The first option, **Admin Automation**, is recommended for most participants. Th
 
 ### Option Two - REST APIs
 
-Details coming soon.
+The second option, **calling the RailroadPM REST APIs**, offers more flexibility and control over the interchange of data. It supports any operating system and any programming language capable of issuing calls to a [REST API endpoint](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_Web_services). But this option requires a much greater technical understanding and a software development effort.
+
+Due to the wide variety of platforms and languages that can be used to implement this option, this kit does not attempt to provide a working example of this approach. However, further details, including an outline of the steps required (pseudocode) are provided in the [README file found in the APIs folder](/APIs/README.md) of this kit.
