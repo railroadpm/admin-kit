@@ -1,5 +1,5 @@
 const config = require('../../config');
-require('../../NewWeek.toml');
+require('../../NewWeek.toml'); // This simple TOML has the advantage of being valid JavaScript assignment statements in global scope
 const { _ } = Cypress;
 
 describe('RPM Admin', () => {
@@ -37,7 +37,8 @@ describe('RPM Admin', () => {
 
     cy.contains(Railroad).click();
 
-    // Fill in data fields from file
+    // Fill in data fields from TOML file
+    // (TOML was executed as JavaScript assignment statements in global scope via "require" above)
     cy.url()
       .should('include', '/reports')
       .then(() => {
