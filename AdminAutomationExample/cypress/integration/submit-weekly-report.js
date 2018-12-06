@@ -10,6 +10,9 @@ describe('RPM Admin', () => {
     cy.get('#netlify-identity-widget').then($iframe => {
       const $body = $iframe.contents().find('body');
 
+      // Click main "Login" button
+      cy.contains('Login').click();
+
       // Select "Log in" tab instead of "Sign up"
       cy.wrap($body)
         .find('button.btnHeader:nth-of-type(2)')
@@ -44,7 +47,7 @@ describe('RPM Admin', () => {
       .then(() => {
         _(global)
           .keys()
-          .filter(key => key.startsWith('Title') || key.startsWith('CarsOnLine_') || key.startsWith('TrainSpeed_') || key.startsWith('TerminalDwell_'))
+          .filter(key => key.startsWith('WeekEnding') || key.startsWith('TrainSpeed_') || key.startsWith('TerminalDwell_'))
           .each(key => {
             let value = global[key];
             cy.get(`[id^=${key}]`)
@@ -54,15 +57,14 @@ describe('RPM Admin', () => {
       });
 
     // Submit new report
-    cy.contains('Publish').click();
-    cy.contains('Publish now').click();
+    cy.get('.nc-app-editor-btn-save').click();
 
     // Wait for changes to be saved
-    cy.contains('Changes saved');
+    cy.contains('Report saved');
 
     // Log out
-    cy.get('.nc-entryEditor-toolbar button.nc-appHeader-avatar').click();
-    cy.contains('Log Out').click();
-    cy.contains('Login with Netlify Identity');
+    cy.get('.nc-app-avatar-menu').click();
+    cy.get('.nc-app-avatar-logout-btn').click();
+    cy.contains('Login');
   });
 });
