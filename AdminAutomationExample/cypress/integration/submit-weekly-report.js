@@ -5,13 +5,11 @@ const { _ } = Cypress;
 describe('RPM Admin', () => {
   it('accepts a valid login and a new set of weekly data to publish', () => {
     cy.visit('/');
-    cy.contains('Login with Netlify Identity').click();
+    // Click main "Login" button
+    cy.contains('Login').click();
 
     cy.get('#netlify-identity-widget').then($iframe => {
       const $body = $iframe.contents().find('body');
-
-      // Click main "Login" button
-      cy.contains('Login').click();
 
       // Select "Log in" tab instead of "Sign up"
       cy.wrap($body)
@@ -31,7 +29,13 @@ describe('RPM Admin', () => {
     });
 
     cy.url().should('include', '/collections');
-    cy.contains('Quick add').click();
+    cy.get('div')
+      .contains('Loading configuration')
+      .should('not.exist');
+    cy.get('.nc-user-role-is-participant');
+    cy.get('.nc-app-header-quick-add')
+      .should('be.visible')
+      .click();
 
     if (Railroad === 'AOR') {
       // Ensure correct option is pressed for AOR

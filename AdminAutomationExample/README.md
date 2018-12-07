@@ -30,5 +30,7 @@ To use the Admin Automation option for EDI, here are the steps you would follow 
     npm run upload
     ```
 
+1.  You _may_ be asked to allow the process to send traffic through your firewall. If so, allow access.
+
 1.  Note the _exit code_ of the process. A **non-zero exit code** means that an error occurred and
     the data likely was not uploaded successfully. An exit code of _zero_ indicates success. Sample error and success outputs are provided in the `sample-output` folder.
