@@ -5,6 +5,7 @@ const { _ } = Cypress;
 describe('RPM Admin', () => {
   it('accepts a valid login and a new set of weekly data to publish', () => {
     cy.visit('/');
+
     // Click main "Login" button
     cy.contains('Login').click();
 
@@ -23,10 +24,13 @@ describe('RPM Admin', () => {
       cy.wrap($body)
         .find('input[name="password"]')
         .type(config.password);
+      cy.wait(100);
       cy.wrap($body)
         .find('.form button[type="submit"]')
         .click();
     });
+
+    cy.wait(500);
 
     cy.url().should('include', '/collections');
     cy.get('div')
@@ -44,7 +48,7 @@ describe('RPM Admin', () => {
 
     cy.contains(Railroad).click();
 
-    // Fill in data fields from TOML file
+    // Fill in data fields from global variables
     // (TOML was executed as JavaScript assignment statements in global scope via "require" above)
     cy.url()
       .should('include', '/reports')
@@ -68,7 +72,9 @@ describe('RPM Admin', () => {
 
     // Log out
     cy.get('.nc-app-avatar-menu').click();
-    cy.get('.nc-app-avatar-logout-btn').click();
+    cy.contains('Log Out').click();
+
+    // Wait for login to be displayed again before considering the submission complete
     cy.contains('Login');
   });
 });
