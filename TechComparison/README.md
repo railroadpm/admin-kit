@@ -2,8 +2,7 @@
 
 Here's a summary of the technical differences between the previous RPM solution (Version 1.x) and this one (Version 2.x).
 
-<table class=MsoTable15Grid5DarkAccent5 border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none'>
+<table cellspacing=0 cellpadding=0 style='border-collapse:collapse;border:none'>
  <tr>
   <td width=132 valign=top style='width:98.75pt;border:solid white 1.0pt;
   border-right:none;background:#5B9BD5;padding:0in 5.4pt 0in 5.4pt'>
