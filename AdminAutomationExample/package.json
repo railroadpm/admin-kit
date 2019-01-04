@@ -1,7 +1,7 @@
 {
-  "name": "aar-rpm-publish",
+  "name": "aar-rpm-col-publish",
   "version": "1.0.0",
-  "description": "Automate Weekly RPM Data Upload",
+  "description": "Automate Weekly RPM COL Data Upload",
   "main": "index.js",
   "scripts": {
     "cy-open": "cypress open",
