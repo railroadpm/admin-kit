@@ -1,4 +1,4 @@
-# RailroadPM.org Participant Kit - Admin Automation Details
+# RailroadPM.org Admin Kit - Admin Automation Details
 
 This **Admin Automation** option is the recommended way of performing EDI with the RailroadPM system. It mimics the steps that a human user would take to login to the RailroadPM data administration (aka "extranet") website and enter the weekly data. This has the benefit of consistency in the way that the data is accepted and verified by the RailroadPM system.
 
@@ -12,7 +12,7 @@ To use the Admin Automation option for EDI, here are the steps you would follow 
     cd AdminAutomationExample
     ```
 
-1.  Install [Node.js (LTS version 8.x)](https://nodejs.org/en/download/) if it isn't already installed.
+1.  Install [Node.js (LTS version)](https://nodejs.org/en/download/) if it isn't already installed.
 
 1.  Run the following command to install the required Node.js NPM packages:
 
